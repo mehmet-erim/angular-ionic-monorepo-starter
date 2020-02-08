@@ -27,7 +27,9 @@
               "projects/web/src/favicon.ico",
               "projects/web/src/assets"
             ],
-            "styles": ["projects/web/src/styles.scss"],
+            "styles": [
+              "projects/web/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -90,7 +92,9 @@
               "projects/web/src/favicon.ico",
               "projects/web/src/assets"
             ],
-            "styles": ["projects/web/src/styles.scss"],
+            "styles": [
+              "projects/web/src/styles.scss"
+            ],
             "scripts": []
           }
         },
@@ -102,7 +106,9 @@
               "projects/web/tsconfig.spec.json",
               "projects/web/e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {
@@ -243,7 +249,9 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {
@@ -321,10 +329,62 @@
           }
         }
       }
+    },
+    "playground": {
+      "root": "projects/web",
+      "sourceRoot": "projects/web/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/playground",
+            "index": "projects/web/src/index.html",
+            "main": "projects/web/src/main.playground.ts",
+            "polyfills": "projects/web/src/polyfills.ts",
+            "tsConfig": "projects/web/tsconfig.app.json",
+            "assets": [
+              "projects/web/src/favicon.ico",
+              "projects/web/src/assets"
+            ],
+            "styles": [
+              "projects/web/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/web/src/environments/environment.ts",
+                  "with": "projects/web/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": false
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "playground:build",
+            "port": 4201
+          }
+        }
+      }
     }
   },
   "cli": {
-    "defaultCollection": "@ionic/angular-toolkit"
+    "defaultCollection": "@ionic/angular-toolkit",
+    "analytics": false
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
