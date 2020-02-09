@@ -23,13 +23,8 @@
             "polyfills": "projects/web/src/polyfills.ts",
             "tsConfig": "projects/web/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "projects/web/src/favicon.ico",
-              "projects/web/src/assets"
-            ],
-            "styles": [
-              "projects/web/src/styles.scss"
-            ],
+            "assets": ["projects/web/src/favicon.ico", "projects/web/src/assets"],
+            "styles": ["projects/web/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -88,13 +83,8 @@
             "polyfills": "projects/web/src/polyfills.ts",
             "tsConfig": "projects/web/tsconfig.spec.json",
             "karmaConfig": "projects/web/karma.conf.js",
-            "assets": [
-              "projects/web/src/favicon.ico",
-              "projects/web/src/assets"
-            ],
-            "styles": [
-              "projects/web/src/styles.scss"
-            ],
+            "assets": ["projects/web/src/favicon.ico", "projects/web/src/assets"],
+            "styles": ["projects/web/src/styles.scss"],
             "scripts": []
           }
         },
@@ -106,9 +96,7 @@
               "projects/web/tsconfig.spec.json",
               "projects/web/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -244,14 +232,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json", "e2e/tsconfig.json"],
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -299,7 +281,7 @@
       "projectType": "library",
       "root": "projects/common",
       "sourceRoot": "projects/common/src",
-      "prefix": "lib",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -319,13 +301,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/common/tsconfig.lib.json",
-              "projects/common/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/common/tsconfig.lib.json", "projects/common/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -343,13 +320,8 @@
             "main": "projects/web/src/main.playground.ts",
             "polyfills": "projects/web/src/polyfills.ts",
             "tsConfig": "projects/web/tsconfig.app.json",
-            "assets": [
-              "projects/web/src/favicon.ico",
-              "projects/web/src/assets"
-            ],
-            "styles": [
-              "projects/web/src/styles.scss"
-            ],
+            "assets": ["projects/web/src/favicon.ico", "projects/web/src/assets"],
+            "styles": ["projects/web/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
