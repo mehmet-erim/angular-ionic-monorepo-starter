@@ -11,6 +11,7 @@ import { StopPropagationDirective } from './directives/stop-propagation.directiv
 import { SortPipe } from './pipes/sort.pipe';
 import { NgxValidateCoreModule } from '@ngx-validate/core';
 import { ValidationErrorComponent } from './components/validation-error.component';
+import { IsValidDirective } from './directives/is-valid.directive';
 
 const declarations = [
   RouterOutletComponent,
@@ -19,6 +20,7 @@ const declarations = [
   FormSubmitDirective,
   StopPropagationDirective,
   SortPipe,
+  IsValidDirective,
 ];
 
 @NgModule({

@@ -15,7 +15,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
             id="validationCustom02"
             placeholder="Name"
             formControlName="name"
-            required
+            isValid
           />
           <div class="valid-feedback">
             Looks good!
